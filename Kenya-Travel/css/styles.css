@@ -1,0 +1,394 @@
+*{
+	box-sizing: border-box;
+
+}
+
+.container{
+	width:100%;
+	margin:0px auto;
+	position: relative;
+	z-index: 0;
+}
+body{
+	margin: 0;
+	
+}
+
+
+.navmenu ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: fixed;
+	z-index: 1;
+	
+	
+}
+
+ .navmenu ul li {
+	
+	width: 200px;
+	height: 40px; 
+	background-color:black;
+	text-align: center;
+	line-height:40px;
+	display: inline-block; 
+	border-right:2px solid red;
+	color:white;
+	
+} 
+
+ .navmenu ul li a{
+	text-decoration: none;
+	color:white;
+	display: block;
+	
+} 
+
+
+
+.navmenu ul li a:hover{
+	background:grey;
+}
+.navmenu ul li ul li{
+	display: none;
+}
+.navmenu ul li:hover ul li{
+	display: block;
+}
+.navmenu{
+	background-color: black;
+
+}
+
+.navmenu ul li a:hover:not(.active){
+	color:white;
+	text-decoration:none;
+}
+ .active{
+	background-color: red;
+}
+.navmenu ul li:last-child{
+	border-right:none;
+} 
+.footer{
+	background: black;
+	color:white;
+	height: 300px;
+	width: 100%;
+	position: relative;
+	
+}
+.footer .footer-bottom{
+	height: 100px;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	padding-top:20px;
+	
+}
+.footer .footer-content{
+	border: 1px solid red;
+	height: 200px;
+	display: flex;
+}
+.footer  .footer-content  .footer-section{
+	flex:1;
+	border:1px solid white;
+}
+.footer-section a{
+	font-size: 1rem;
+	
+}
+.footer-section ul li:hover,.footer-section ul li:visited{
+color:red;
+}
+.footer i{
+	color:red;
+}
+.footer a{
+	color:white;
+}
+.footer{
+	clear: both;
+	font-size: 1rem;
+}
+
+
+
+
+.container h1{
+	margin:2.5rem;
+	font-size:1.5rem;
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	background-color: red;
+}
+#Holiday{
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	background-color: red;
+
+}
+
+#slider{
+overflow: hidden;
+}
+#slider figure{
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 20s slider infinite;	
+}
+#slider img{
+	width: 600px;
+	height: 600px;
+}
+
+#slider figure img{
+	width:20%;
+	float: left;
+}
+@keyframes slider{
+	0%{
+		left: 0;
+	}
+	20%{
+		left: 0;
+	}
+	25%{
+		left: -100%;
+	}
+	45%{
+		left: -100%;
+	}
+	50%{
+		left: -200%;
+	}
+	70%{
+		left: -300%;
+	}
+	75%{
+		left: -300%;
+	}
+	95%{
+		left: -300%;
+	}
+}
+
+
+.box-1{
+background-color: black;
+color:white;
+}
+.box-1 p{
+	width: 100%;
+	font-size: 1.5rem;
+}
+
+.box-1 h2, .box-2 h2{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 2rem;
+	background-color: red;
+	text-align: center;
+	color:black;
+	}
+
+.box-2 p{
+	background-color: black;
+	color:white;
+	border:2px red solid;
+	font-size: 1.5rem;
+	
+	}
+	#box2-text{
+		width: 100%;
+		float: left;
+
+	}
+
+
+.box-2  img{
+	width:30%;
+	height:12rem;
+	padding:5px 5px ;
+}
+
+.Popular-Holiday{
+	clear: both;
+	width:80%;
+	margin: 2rem auto 0;
+	display: flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+
+}
+
+.head h2{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	clear: both;
+	color:black;
+	background-color: red;
+	font-size: 2rem;
+	text-align: center;
+	
+}
+
+
+.Popular-Holiday .boxpopular{
+	position: relative;
+	width:300px;
+	height:300px;
+	background: #fff;
+	margin:10px;
+	box-sizing: border-box;
+	display: inline-block;
+	
+}
+.Popular-Holiday .boxpopular .imgBoxp{
+	position: relative;
+	overflow: hidden;
+}
+.Popular-Holiday .boxpopular .imgBoxp img{
+	transition:transfrom 2s;
+	width:300px;
+	height:300px;
+	
+}
+.Popular-Holiday .boxpopular:hover .imgBoxp img{
+	transform: scale(1.2);
+}
+.Popular-Holiday .boxpopular .details{
+	position:absolute;
+	top:10px;
+	left:10px;
+	bottom:10px;
+	right:10px;
+	background: rgba(0,0,0,.8);
+	transform: scaleY(0);
+	transition: transform .5s;
+}
+
+.Popular-Holiday .boxpopular:hover  .details{
+
+transform: scaleY(1);
+
+}
+
+.Popular-Holiday .boxpopular .details  .content{
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+text-align: center;
+padding: 15px;
+color:#fff;
+}
+.Popular-Holiday .boxpopular .details  .content h2{
+	margin: 0;
+	padding: 0;
+	font-size: 0.8rem;
+	color:red;
+}
+.Popular-Holiday .boxpopular .details  .content h2:hover{
+	color:white;
+}
+.box-2 img .box-2p{
+	column-count: 2;
+}
+
+
+#contact-info .fa{
+	font-size:x-large;
+	font-weight: bold;
+	padding:1.2rem;
+}
+
+
+#contact-info{
+	float:right;
+	width: 60%;
+	border:1rem red solid;
+	
+	
+
+}
+#sm .fa{
+	color: black;
+}
+ .fa:hover, .fa:visited{
+	color:grey;
+}
+#sm .fa:hover, #sm .fa:visited{
+	color: red;
+}
+#contact-img img{
+	float: left;
+	width:250px;
+	height:350px;
+
+}
+#contact-info .fa .font-text{
+	border-bottom:solid red;
+}
+#Mount-Kenya img{
+width: 100%;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+   
+
+ 
+   @media only screen and (min-width:760px) and (max-width:900px){
+
+	.container{
+		width: 80%;
+	}
+
+} 
+
+@media only screen and (max-width:500px){
+	.navmenu{
+		display:flex;
+		flex-wrap: wrap;
+		flex-direction:row;
+	
+	}
+	#slider h1{
+		text-align: end;
+		font-size:0.8rem;
+		
+	}
+
+ 	.footer{
+		display:flex;
+		flex-wrap: wrap;
+		flex-direction:row;
+		row-gap:auto;
+	} 
+	 .footer-content{
+		display:flex;
+		flex-wrap: wrap;
+		flex-direction:row;
+	} 
+	 
+ 	.footer-bottom{
+		display:flex;
+		flex-wrap: wrap;
+		flex-direction:row;
+		flex: auto;
+	}
+ 
+	}
+ 
+
